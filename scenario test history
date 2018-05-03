@@ -1,0 +1,74 @@
+====================================
+Alternative mouse methods for JQuery
+====================================
+api.jquery.com/category/events/mouseevents.
+
+        $('document').ready(function()
+        { 
+            //Your code goes here
+        })
+
+    $cm = new ManageCustomer();
+    $cm->getCustomersData();
+    $cm->displayCustomersDropDown();
+
+//    $ws = new workStatusList();
+//    $ws->getWorkStatuss();
+//    $ws->displayWorkStatusesDropDown();
+
+    updateWorkType( 1, "cash recon");
+    createWorkType("Bank Recon");
+    createWorkType("EFT Recon");
+    createWorkType("Invoice Recon");
+    $wt=new workTypeList();
+    $wt->getWorkTypes();
+    $wt->displayWorkTypesDropDown();
+    
+    $mnth=new monthList();
+    $mnth->getMonths();
+    $mnth->displayMonthsDropDown();
+    $yr=new yearList();
+    $yr->getYears();
+    $yr->displayYearsDropDown();    
+    createYear(2050);
+     * createYear(2000);
+    echo"<br><br>";
+    messageAlert("busy testing month list", 'bd');
+    
+    all the above are working tests 
+
+    createWorkStatus("issued");
+    createWorkStatus("capturing");
+    createWorkStatus("checking");
+    createWorkStatus("finalizing");
+    createWorkStatus("finished");
+    createWorkStatus("cancelled");
+
+//function updateWorkItem($wi,$wt,$ci,$wm,$wy,$wui,$ws,$we,$wa)
+    
+/*    
+    setupOriginalWork($w->getWT(), $w->getCID(), $w->getWM(), $w->getWY(), 
+            $w->getUID(), $w->getST(), $w->getET(), $w->getWA());
+ * 
+              TEST ON WHETHER ABOVE ARE OPERATING CORRECTLY
+ * 
+     messageAlert(
+    "work ID : ".$wi."<br>work Types : ".$wt."<br>customers : ".$ci.
+    "<br>months : ".$wm."<br>years : ".$wy."<br>users : ".$wu.
+    "<br>start date : ".$wsd."<br>end date : ".$wed."<br> active : ".testTrue($wa)            
+    , "gd");
+ * 
+ */
+     messageAlert(
+    "work ID : ".$wi."<br>work Types : ".$wt." ".$_SESSION['old1']." originally".
+    "<br>customers : ".$ci." ".$_SESSION['old2']." originally".
+    "<br>months : ".$wm." ".$_SESSION['old3']." originally"."<br>years : ".
+             $wy." ".$_SESSION['old4']." originally".
+    "<br>users : ".$wu." ".$_SESSION['old5']." originally".
+    "<br>start date : ".$wsd." ".$wu.$_SESSION['old6']." originally".
+    "<br>end date : ".$wed." ".$wu.$_SESSION['old7']." originally"."<br> active : ".testTrue($wa)." ".
+    $wu.$_SESSION['old8']." originally", "gd");
+
+messageAlert("start date : ".$_SESSION['old6'], "bd");
+messageAlert("end date : ".$_SESSION['old7'], "bd");
+messageAlert("active? : ".$_SESSION['old8'], "bd");
